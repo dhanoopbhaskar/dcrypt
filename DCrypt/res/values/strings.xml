@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DCrypt</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_help">Help</string>
+    <string name="action_logs">Logs</string>
+    <string name="edit_message">Enter a directory path</string>
+    <string name="setDir">SET</string>
+    <string name="startBtnStr">START</string>
+    <string name="stopBtnStr">STOP</string>
+    <string name="srcPathStr">FROM</string>
+    <string name="destPathStr">TO</string>
+    <string name="whitespace">         </string>
+    <color name="bgColor">#000000</color>    
+    <string name="enableFileSpinner">View File List</string>
+    <string name="disableFileSpinner">Hide File List</string>
+	<string name="action_spinner">File List</string>
+	<string name="help_message">
+	    \u0020All rights reserved to \n Dhanoop Bhaskar\n http://www.dhanoopbhaskar.in\n
+	</string>
+	<string name="help_title">\u00A9 Copyright</string>
+	<string name="picview_prev">Previous</string>
+	<string name="picview_next">Next</string>
+	<string name="picview_return">Back</string>
+	<string name="password_message">Enter the password to continue</string>
+	<string name="enableShredding">ENABLE SHREDDING</string>
+	<string name="disableShredding">DISABLE SHREDDING</string>
+	<string name="log_title">Logs</string>
+</resources>

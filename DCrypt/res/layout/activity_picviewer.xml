@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >		       
+
+	<ImageView
+	    android:id="@+id/dcryptImageView"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/prevButton" />
+
+	<Button
+	    android:id="@+id/nextButton"
+	    android:layout_width="124dip"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/dcryptImageView"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/db_button"
+	    android:text="@string/picview_next" />
+
+	<Button
+	    android:id="@+id/returnButton"
+	    style="@drawable/db_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/db_button"
+	    android:text="@string/picview_return" />
+
+	<Button
+	    android:id="@+id/prevButton"
+	    android:layout_width="124dip"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_toLeftOf="@+id/nextButton"
+	    android:layout_toRightOf="@+id/returnButton"
+	    android:background="@drawable/db_button"
+	    android:text="@string/picview_prev" />
+	
+</RelativeLayout>
