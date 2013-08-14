@@ -256,23 +256,32 @@ public class DCryptActivity extends Activity {
 		LayoutInflater layoutInflater = LayoutInflater.from(this);
 		View view = layoutInflater.inflate(R.layout.password_dialog, null);
 		passwordDialog.setView(view);
-		final EditText input = (EditText) view.findViewById(R.id.passwordEditText);		
-
+		final EditText input1 = (EditText) view.findViewById(R.id.passwordEditText1);		
+		final EditText input2 = (EditText) view.findViewById(R.id.passwordEditText2);		
+		
 		passwordDialog.setCancelable(false);
 		
 		passwordDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 			
 			public void onClick(DialogInterface dialog, int whichButton) {
 				
-				masterPassword = input.getText().toString();
+				masterPassword = input1.getText().toString();
+				
 				if (masterPassword == null || masterPassword.trim().equals("")) {
-					toastAlert("The password cannot be empty!");
+					toastAlert("The password cannot be empty!");					
 					acceptPasswordFromUser();
 					return;
 				} else {
 					//toastAlert(masterPassword);
 					//System.out.println(masterPassword);
-					handleIntents();
+					if (masterPassword.equals(input2.getText().toString())) {
+						handleIntents();						
+					} else {
+						toastAlert("Entered passwords do not match!");
+						acceptPasswordFromUser();
+						return;
+					}
+					
 				}
 			}
 		});
@@ -461,7 +470,7 @@ public class DCryptActivity extends Activity {
 	 */
 	void toastAlert(String message) {
 		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
-		dbLogTextView.append(message + "\n");		
+		dbLogTextView.append(" *" + message + "\n");		
 	}	
 
 

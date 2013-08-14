@@ -23,8 +23,10 @@
 	<string name="picview_prev">Previous</string>
 	<string name="picview_next">Next</string>
 	<string name="picview_return">Back</string>
-	<string name="password_message">Enter the password to continue</string>
+	<string name="password_message1">Enter password \u003a</string>
+	<string name="password_message2">Verify password \u003a</string>
 	<string name="enableShredding">ENABLE SHREDDING</string>
 	<string name="disableShredding">DISABLE SHREDDING</string>
 	<string name="log_title">Logs</string>
+	<string name="dcryptImageView_Desc">Image Preview</string>
 </resources>

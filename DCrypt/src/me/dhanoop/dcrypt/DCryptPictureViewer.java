@@ -19,7 +19,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
-@SuppressLint("NewApi")
 public class DCryptPictureViewer extends Activity implements OnTouchListener {
 
 	private static final String TAG = "DCrypt - Touch";
@@ -30,7 +29,7 @@ public class DCryptPictureViewer extends Activity implements OnTouchListener {
     // These matrices will be used to scale points of the image
     private Matrix matrix = new Matrix();
     private Matrix savedMatrix = new Matrix();
-    private Matrix originalMatrix = new Matrix();
+    //private Matrix originalMatrix = new Matrix();
 
     // The 3 states (events) which the user is trying to perform
     private static final int NONE = 0;
@@ -137,7 +136,8 @@ public class DCryptPictureViewer extends Activity implements OnTouchListener {
 	/**
 	 * 
 	 */
-    @SuppressWarnings("deprecation")
+    @SuppressLint("NewApi")
+	@SuppressWarnings("deprecation")
 	private void scaleProperly(int height, int width) {						
 		int measuredWidth = 0;
 		int measuredHeight = 0;
@@ -154,7 +154,7 @@ public class DCryptPictureViewer extends Activity implements OnTouchListener {
         	measuredHeight = d.getHeight(); 
         }
 		
-		float scale = measuredWidth / width;
+		//float scale = measuredWidth / width;
 		Log.i("DCrypt", "Height=" + measuredHeight + "; Width=" + measuredWidth);
 		//originalMatrix = new Matrix();
 		//originalMatrix.postScale(0.25f, 0.25f);
@@ -167,7 +167,8 @@ public class DCryptPictureViewer extends Activity implements OnTouchListener {
      * @param event
      * @return
      */
-    private float spacing(MotionEvent event) {
+    @SuppressLint("FloatMath")
+	private float spacing(MotionEvent event) {
         float x = event.getX(0) - event.getX(1);
         float y = event.getY(0) - event.getY(1);
         return FloatMath.sqrt(x * x + y * y);
