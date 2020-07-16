@@ -16,4 +16,4 @@ Regards,
 
 Dhanoop Bhaskar
 
-https://www.dhanoopbhaskar.com
+https://dhanoopbhaskar.com
